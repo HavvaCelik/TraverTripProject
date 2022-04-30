@@ -1,0 +1,26 @@
+﻿@using TraverTripProject.Models.Class
+@model List<About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<html>
+<body>
+    <div class="content">
+        <div class="wrap">
+            <div class="about">
+                <h3>About</h3>
+
+                @foreach (var about in Model)
+                {
+                    <img src="@about.imgUrl" alt="" />
+                    <p>@about.Description</p>
+                }
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

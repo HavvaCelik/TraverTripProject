@@ -1,0 +1,25 @@
+﻿@model TraverTripProject.Models.Class.Command
+@{
+    ViewBag.Title = "CommandBring";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Command Update Page</h2>
+<br />
+@using (Html.BeginForm("CommandUpdate", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(t0 => t0.ID)
+    @Html.TextBoxFor(t0 => t0.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(t0 => t0.UserName)
+    @Html.TextBoxFor(t0 => t0.UserName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(t0 => t0.Email)
+    @Html.TextBoxFor(t0 => t0.Email, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(t0 => t0.Commands)
+    @Html.TextAreaFor(t0 => t0.Commands, 15, 1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success"> Command Update </button>
+}
+
